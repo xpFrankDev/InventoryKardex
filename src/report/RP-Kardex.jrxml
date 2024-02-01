@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RP-Kardex" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryNewPage="true" isSummaryWithPageHeaderAndFooter="true" isFloatColumnFooter="true" whenResourceMissingType="Empty" uuid="d888d752-402b-42f8-82fe-9b678e303b86">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Cpanel - Cagama"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="idKardexz" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[call `sp.verDetalleKardex` ( $P{idKardexz} )]]>
+	</queryString>
+	<field name="idKardex" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="idKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="fechaKardex" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="rucKardex" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ruc"/>
+		<property name="com.jaspersoft.studio.field.label" value="rucKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="razonSocialCliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="razonSocial"/>
+		<property name="com.jaspersoft.studio.field.label" value="razonSocialCliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="usuarioKardex" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="usuario"/>
+		<property name="com.jaspersoft.studio.field.label" value="usuarioKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="tipoMovimientoKardex" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipoMovimiento"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipoMovimientoKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="monedaKardex" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="moneda"/>
+		<property name="com.jaspersoft.studio.field.label" value="monedaKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="cantidadArticulos" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="cantidadArticulos"/>
+		<property name="com.jaspersoft.studio.field.label" value="cantidadArticulos"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalValorizado" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="totalValorizado"/>
+		<property name="com.jaspersoft.studio.field.label" value="totalValorizado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estadoKardex" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="estado"/>
+		<property name="com.jaspersoft.studio.field.label" value="estadoKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="documentoKardex" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="documento"/>
+		<property name="com.jaspersoft.studio.field.label" value="documentoKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="valorDocumentoKardex" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="valorDocumento"/>
+		<property name="com.jaspersoft.studio.field.label" value="valorDocumentoKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="categoriaKardex" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="categoria"/>
+		<property name="com.jaspersoft.studio.field.label" value="categoriaKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="subCategoriaKardex" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="subcategoria"/>
+		<property name="com.jaspersoft.studio.field.label" value="subCategoriaKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="observacionKardex" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="observacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="observacionKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="ultimaModificacionKardex" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="ultimaModificacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="ultimaModificacionKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="usuarioModificacionKardex" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="usuarioModificacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="usuarioModificacionKardex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+	</field>
+	<field name="cantidadModificaciones" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="cantidadModificaciones"/>
+		<property name="com.jaspersoft.studio.field.label" value="cantidadModificaciones"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kardex"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vkID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="vkID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventaKardex"/>
+	</field>
+	<field name="vkFecha" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.label" value="vkFecha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventaKardex"/>
+	</field>
+	<field name="vkTipoVenta" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipoVenta"/>
+		<property name="com.jaspersoft.studio.field.label" value="vkTipoVenta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventaKardex"/>
+	</field>
+	<field name="vkTipoCliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipoCliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="vkTipoCliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventaKardex"/>
+	</field>
+	<field name="vkDireccion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="direccion"/>
+		<property name="com.jaspersoft.studio.field.label" value="vkDireccion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventaKardex"/>
+	</field>
+	<field name="vkVendedor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vendedor"/>
+		<property name="com.jaspersoft.studio.field.label" value="vkVendedor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventaKardex"/>
+	</field>
+	<field name="netoVenta" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="montoNeto"/>
+		<property name="com.jaspersoft.studio.field.label" value="netoVenta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventaKardex"/>
+	</field>
+	<field name="vkCantidadIgv" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="cantidadIgv"/>
+		<property name="com.jaspersoft.studio.field.label" value="vkCantidadIgv"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventaKardex"/>
+	</field>
+	<field name="vkMontoTotal" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="montoTotal"/>
+		<property name="com.jaspersoft.studio.field.label" value="vkMontoTotal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventaKardex"/>
+	</field>
+	<field name="vkEstadoPago" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="estadoPago"/>
+		<property name="com.jaspersoft.studio.field.label" value="vkEstadoPago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventaKardex"/>
+	</field>
+	<field name="vkmontoIgv" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="montoIgv"/>
+		<property name="com.jaspersoft.studio.field.label" value="vkmontoIgv"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventaKardex"/>
+	</field>
+	<field name="fechaFactura" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaFactura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="facturaKardex"/>
+	</field>
+	<field name="valorFactura" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="numFactura"/>
+		<property name="com.jaspersoft.studio.field.label" value="valorFactura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="facturaKardex"/>
+	</field>
+	<field name="netoFactura" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="montoNeto"/>
+		<property name="com.jaspersoft.studio.field.label" value="netoFactura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="facturaKardex"/>
+	</field>
+	<field name="igvFactura" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="montoIgv"/>
+		<property name="com.jaspersoft.studio.field.label" value="igvFactura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="facturaKardex"/>
+	</field>
+	<field name="totalFactura" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="montoTotal"/>
+		<property name="com.jaspersoft.studio.field.label" value="totalFactura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="facturaKardex"/>
+	</field>
+	<field name="estadoFactura" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="estado"/>
+		<property name="com.jaspersoft.studio.field.label" value="estadoFactura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="facturaKardex"/>
+	</field>
+	<field name="idPago" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="idPago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagoFacturaKardex"/>
+	</field>
+	<field name="pfkIdFact" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idFacturaKardex"/>
+		<property name="com.jaspersoft.studio.field.label" value="pfkIdFact"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagoFacturaKardex"/>
+	</field>
+	<field name="pfkTipoPago" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipoPago"/>
+		<property name="com.jaspersoft.studio.field.label" value="pfkTipoPago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagoFacturaKardex"/>
+	</field>
+	<field name="pfkBanco" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="banco"/>
+		<property name="com.jaspersoft.studio.field.label" value="pfkBanco"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagoFacturaKardex"/>
+	</field>
+	<field name="pfkReferenciaPago" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="referenciaPago"/>
+		<property name="com.jaspersoft.studio.field.label" value="pfkReferenciaPago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagoFacturaKardex"/>
+	</field>
+	<field name="estadoPago" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="estado"/>
+		<property name="com.jaspersoft.studio.field.label" value="estadoPago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagoFacturaKardex"/>
+	</field>
+	<field name="idKardexPago" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idKardex"/>
+		<property name="com.jaspersoft.studio.field.label" value="idKardexPago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagoFacturaKardex"/>
+	</field>
+	<field name="pfkMontoPagado" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="montoPagado"/>
+		<property name="com.jaspersoft.studio.field.label" value="pfkMontoPagado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagoFacturaKardex"/>
+	</field>
+	<field name="pfkUsuario" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="usuario"/>
+		<property name="com.jaspersoft.studio.field.label" value="pfkUsuario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagoFacturaKardex"/>
+	</field>
+	<field name="pfkFecha" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.label" value="pfkFecha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagoFacturaKardex"/>
+	</field>
+	<field name="pfkFechaPago" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechaPago"/>
+		<property name="com.jaspersoft.studio.field.label" value="pfkFechaPago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagoFacturaKardex"/>
+	</field>
+	<field name="idCliente" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="idCliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="cRuc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ruc"/>
+		<property name="com.jaspersoft.studio.field.label" value="cRuc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="razonSocial" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="razonSocial"/>
+		<property name="com.jaspersoft.studio.field.label" value="razonSocial"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estadoCliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="estado"/>
+		<property name="com.jaspersoft.studio.field.label" value="estadoCliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="fechaCreacion" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechaCreacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaCreacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ultimaModificacion" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="ultimaModificacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="ultimaModificacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rubro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rubro"/>
+		<property name="com.jaspersoft.studio.field.label" value="rubro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idProducto" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="idProducto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productoKardex"/>
+	</field>
+	<field name="codigoProducto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="codigo"/>
+		<property name="com.jaspersoft.studio.field.label" value="codigoProducto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productoKardex"/>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombreProducto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productoKardex"/>
+	</field>
+	<field name="cantidadProducto" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="cantidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="cantidadProducto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productoKardex"/>
+	</field>
+	<field name="precioRegistradoProducto" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="precioRegistrado"/>
+		<property name="com.jaspersoft.studio.field.label" value="precioRegistradoProducto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productoKardex"/>
+	</field>
+	<field name="valorGuia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="valor"/>
+		<property name="com.jaspersoft.studio.field.label" value="valorGuia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guiaKardex"/>
+	</field>
+	<field name="moneda" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="moneda"/>
+		<property name="com.jaspersoft.studio.field.label" value="moneda"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productoKardex"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estadoProducto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="estado"/>
+		<property name="com.jaspersoft.studio.field.label" value="estadoProducto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productoKardex"/>
+	</field>
+	<field name="fechaProducto" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaProducto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productoKardex"/>
+	</field>
+	<variable name="CalcProds" class="java.lang.Double">
+		<variableExpression><![CDATA[+($F{cantidadProducto}*$F{precioRegistradoProducto})]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="115" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="544" height="20" uuid="2aa61081-0d4b-42c8-96af-a9de62d0d362"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Nota de Salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="430" y="30" width="60" height="40" uuid="86fb0e13-da47-4ca6-aec4-1dd0d6180960">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph leftIndent="8"/>
+				</textElement>
+				<text><![CDATA[Código:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="490" y="30" width="53" height="40" uuid="b5d51309-a8e3-4820-8d59-da5228a3557e"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idKardex}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="31" width="100" height="20" uuid="0d3b3ec7-354d-4592-9df5-bf8968561702">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="7" rightIndent="6"/>
+				</textElement>
+				<text><![CDATA[Tipo Movimiento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="31" width="90" height="20" uuid="4586b72a-7894-4263-9459-ef22ef058345"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tipoMovimientoKardex}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="51" width="100" height="19" uuid="069d6b2b-2c57-498d-b1c6-13c7cade3ee4">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+					<paragraph leftIndent="7" rightIndent="6"/>
+				</textElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="49" width="100" height="20" uuid="7f312076-79d7-4425-9a5b-7bb2c1f10f09">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph leftIndent="7" rightIndent="6"/>
+				</textElement>
+				<text><![CDATA[Factura:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="51" width="90" height="19" uuid="c3120ab9-1a38-424b-99aa-1816596e1345">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{fechaKardex})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="49" width="90" height="20" uuid="59862d90-4c3f-43cb-9c36-58e5ec2bf380">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{valorFactura}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="70" width="100" height="20" uuid="284109c7-b95a-4dee-ad4f-34414b636405">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="6"/>
+				</textElement>
+				<text><![CDATA[Descripción:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="70" width="442" height="20" uuid="a48a88e4-a329-4bcc-9de2-a7f5e247698c">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{observacionKardex}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="90" width="100" height="20" uuid="6a81610a-fd6d-4858-b32c-ef0f1614962e">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+					<paragraph rightIndent="6"/>
+				</textElement>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="100" y="90" width="230" height="20" uuid="b258ddd4-2a00-4236-8775-cf2c67caf377">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{razonSocialCliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="340" y="90" width="40" height="20" uuid="21d86822-5d36-4742-89a7-dd75f7f3de19">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="6"/>
+				</textElement>
+				<text><![CDATA[RUC:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="90" width="162" height="20" uuid="b5756f95-f804-44d9-a73f-eefe52bae517">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rucKardex}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="595" height="20" uuid="a9c58691-17e5-4faa-a1dd-9115309c3488">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph rightIndent="6"/>
+				</textElement>
+				<text><![CDATA[Descripción de los productos agregas en la Salida.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="54" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+			<staticText>
+				<reportElement x="10" y="10" width="60" height="20" uuid="ea99384e-f32d-476e-9a10-5e47abe1880f">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="4"/>
+				</textElement>
+				<text><![CDATA[Código:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="10" width="90" height="20" uuid="4e516263-9ba9-4576-9032-61896d932ceb"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="30" width="320" height="20" uuid="01cf10cc-5048-45b7-8fa5-f412b2d47d69">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="30" width="70" height="20" uuid="b5dfaece-707c-4142-afda-89e9f70284ae">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="4"/>
+				</textElement>
+				<text><![CDATA[Descripción:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="330" y="10" width="50" height="20" uuid="6835f06d-d827-474f-bca8-15abda41f3f3">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidadProducto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="268" y="10" width="62" height="20" uuid="1f1e4935-938e-45a8-b2cd-2991fa5bafe1">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="4"/>
+				</textElement>
+				<text><![CDATA[Cantidad:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="454" y="10" width="88" height="20" uuid="e4b8548e-2367-41ec-a710-a4107788ab78">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{precioRegistradoProducto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="384" y="10" width="70" height="20" uuid="046b96d7-bf5d-44d7-bc06-5ec595755f05">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="4"/>
+				</textElement>
+				<text><![CDATA[Precio Salida:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="454" y="30" width="90" height="20" uuid="45ff6121-aa25-446b-8bb7-e5c7d8aa41c6">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{CalcProds}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="390" y="30" width="64" height="20" uuid="45ecb040-b50a-4cf8-a842-9f8e5638896e">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+					<paragraph rightIndent="4"/>
+				</textElement>
+				<text><![CDATA[Sumatoria:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="69" splitType="Prevent">
+			<rectangle>
+				<reportElement x="-20" y="0" width="595" height="45" backcolor="rgba(255, 255, 255, 0.7137255)" uuid="0e98b13b-915a-4f1c-89d3-02d66c7f3683"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="3" width="60" height="41" forecolor="#030303" uuid="1a5ce155-383d-44c5-b397-d52e378ca39b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Usuario:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="0" width="110" height="43" forecolor="#0F0E0E" uuid="5e17e0cb-85d3-4be6-9c6d-0aad303e8600"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{usuarioKardex}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="260" y="2" width="120" height="41" forecolor="#030303" uuid="021ef802-1eb7-4ec5-aad0-d53117c535c4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Firma de Entrega:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="45" width="555" height="23" uuid="a57a7f8f-d056-4ad0-a5aa-e2e63a108618"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Documento interno para llevar el control de los movimientos en el inventario.]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>
